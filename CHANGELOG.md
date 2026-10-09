@@ -1,0 +1,19 @@
+# Changelog
+
+## 1.2.0 — 2026-10-09
+
+- Rename the project to Autoguide and the Skill identifier to `autoguide`.
+- Translate the README, Skill, all 15 guide documents, metadata, examples, and release instructions into English.
+- Update installation paths, invocations, package names, and translated heading links.
+- Add the Autoguide Non-Resale License: permit personal and internal organizational use while requiring separate permission for paid redistribution.
+- Retain user-led collaboration, live research, authorization boundaries, verification requirements, and all three logging responsibilities.
+
+## 1.1.0 — 2026-10-09
+
+- Prepare the guide and companion Skill as a self-contained local edition.
+- Preserve Home, three shared guides, five stages for each of the project and feature tracks, and the installation and adaptation guide.
+- Convert private document navigation into relative links and resolve configuration entries from actual installation locations.
+- Add a repository README, public-content and link checks, and standalone Skill packaging.
+- Preserve user-led collaboration, live research, authorization boundaries, acceptance requirements, and all three logging responsibilities.
+
+A version entry records prepared changes. Repository publication, Git tags, and hosted release assets are separate delivery states; a changelog entry alone does not mean a public release exists.

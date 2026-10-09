@@ -1,0 +1,60 @@
+# Feature Track | Initiation Guide
+
+**Keywords:** Feature Track; feature initiation; tools; scripts; scope for this phase; phased requirements; ownership confirmation; project links; integration into a project; standalone operation; existing foundations; runtime location; preserving architecture; protecting existing features; authorized behavior changes; inputs and outputs; acceptance criteria; test planning; feature records; log ownership; AI configuration; stage entry points
+
+**Summary:** Guide business users and AI to confirm the goals, ownership, existing foundations, and scope for this phase before building a feature, tool, script, or automation capability, and establish initial acceptance criteria and test plans. A feature may be integrated into a project or run independently. When integrated, preserve the existing architecture, change target behaviors as authorized, and protect existing features outside the scope. Store documentation and logs alongside the feature. After initiation, proceed through task breakdown, documentation, node design, and execution and progress.
+
+## Scope and how to use this track
+
+This track applies to adding or modifying features, building tools, writing scripts, or implementing an automation workflow around a clearly defined capability. The result may be integrated into an existing project, website, or tool, or run independently locally or in another confirmed environment. A feature may contain multiple levels of subfeatures, multiple steps, or system dependencies. Do not select a track solely by size, line count, standalone operation, or the presence of a user interface.
+
+First read [Home](index.md) and follow the shared principles of user leadership, requirements clarification, plain communication, live online verification, platform identification, configuration updates, and context management. AI starts with the user's business knowledge, real examples, and ultimate goals, and discusses them step by step rather than taking charge of the entire solution. Preparation, discussion, and initiation may reasonably take hours or even days. Do not substitute rushing for confirming requirements.
+
+Features also require initiation before execution, followed by task breakdown, documentation, node design, self-checks, and records. Set the depth of documentation and verification according to complexity, impact, and actual conditions. Read the relevant latest guide when entering the next stage, reuse existing information that remains valid, and do not reread the entire knowledge base before every small action.
+
+## Confirm goals, ownership, and existing foundations
+
+First understand how the user currently works, where repetition or errors occur, why they want a change, and what outcome they expect after the work is complete. Use a real operation to describe the inputs and expected outputs. Reuse information that is already clear. In each round, clarify the current key gaps rather than asking a user with no coding experience to first answer questions about architecture, interfaces, or technology stacks.
+
+Determine ownership case by case. The user may specify the project to integrate with and provide a link or directory, or explicitly choose standalone operation. AI should ask proactively when information is insufficient. After receiving an entry point, verify the actual object, accessible content, and relevant environment. Do not infer structure from names. Mark missing or unavailable information as unconfirmed, check existing materials first, and continue work that does not depend on that information. When a key gap affects correctness or integration, establish the evidence before proceeding with dependent work. Do not invent facts.
+
+For integration, read the original project's relevant documentation, applicable configuration, actual code, directory conventions, reusable capabilities, and operating conditions, and verify where this feature connects. For standalone operation, confirm the actual storage and runtime locations, who will use it, how it is triggered, where inputs come from, and where results are viewed. AI checks technical details according to its actual access and explains findings and limitations in language the user understands.
+
+## Complete feature initiation and define the scope for this phase
+
+Organize the confirmed goals and conditions into an initiation record for the user to correct, supplement, and confirm the current business consensus. The table below lists what should be discussed and saved; it does not require the user to complete the entire table at once. AI organizes known information, preserves the actual status of key unknowns, and clarifies them individually.
+
+Use the current key gaps to understand the outcomes the user finds least acceptable. Distinguish mandatory limits, improvements the user wants that require verification, and preferences that can be adjusted. When tradeoffs are necessary, AI first explains actual effects and feasible options in everyday business language, then helps the user express the reasoning behind their decision. Do not ask a user with no coding experience to rank abstract metrics first, or invent expectations on their behalf. Reuse existing explicit requirements and mark unknowns as awaiting confirmation. Do not turn this guidance into a new form that must be completed in full.
+
+Write confirmed mandatory limits into the same initiation record and link them to implementation requirements, corresponding checks, and actual results. As breakdown and design proceed, clarify how implementation will avoid unacceptable outcomes, which normal and exceptional cases need checks, and what counts as passing. Record not implemented, not checked, and not passed as separate states. Questions and tests cannot guarantee zero errors, and expected business improvements cannot be promised as already achieved.
+
+For example, if the user explicitly says, “No orders may be missed,” verify the processing result of each order against the confirmed sources and processing scope. Keep reasons and discoverable notifications for orders that could not be processed; do not silently treat everything as successful. Apply these requirements in the actual implementation and check suitable normal and failure cases. Passing sample checks covers only the scope checked; do not claim it proves all future cases.
+
+| Content | What to record |
+|-|-|
+| Goals and current situation | The problem the user wants to solve, their current method, expected outcomes, and real examples. |
+| Scope for this phase | What is added or modified this time, its boundaries, and completion criteria; save excluded requirements for discussion or later work. |
+| Ownership and location | The actual basis for integration or standalone operation, project links, directories or runtime locations, and archive entry points for relevant documentation and logs. |
+| Inputs, outputs, and usage | Input sources, processing results, users, and actual modes such as manual operation, invocation, or automatic triggering. |
+| Existing foundations and operating conditions | Reusable code, tools, and rules; environment capabilities, dependencies, and currently available conditions; distinguish verified from unconfirmed information. |
+| Impact and integration constraints | Related modules, data, and existing workflows; the architecture to follow when integrating and the existing behaviors to protect. |
+| Acceptance and testing | How to determine that requirements are met, which normal and exceptional cases to check, and whether to use script checks, simulated user operations, or a combination; refine these during design. Link confirmed mandatory limits to implementation requirements, check conditions, and actual results. Keep unverified business improvements marked as awaiting verification. |
+| Versions and handoff | Applicable Git and version conventions, documentation and log locations, actual status, and entry points for continuing the work. |
+
+When integrating into an existing project, initiation or the start of implementation must explicitly establish: **Strictly follow the original project's architecture; change the target behaviors explicitly authorized for this phase as required, and keep existing features and related workflows outside the scope functioning normally.** Record which behaviors change and which remain. Check existing rules, behaviors, and integration methods first, then verify target changes and related workflows during acceptance. Do not treat “should have no impact” as a verified conclusion.
+
+Discuss with the user whether new requirements belong in this phase or a later stage, based on their actual goals, dependencies, and impact, and update the relevant body text. If the existing architecture cannot support the requirement, explain the specific limitations and discuss alternatives such as adjusting the requirement or hosting the feature independently. Do not change the original project's architecture or refactor the project without authorization within this feature implementation scope. If broader goals require overall coordination, return to the routing decision on Home and realign with the user rather than switching paths independently.
+
+## Results of this stage and next entry points
+
+- The user has confirmed the current goals, scope for this phase, boundaries, and initial acceptance criteria; new requirements or those awaiting discussion are accurately marked.
+- Main usage, inputs and outputs, operating conditions, and maintenance conditions are explained. Key prerequisites are verified or have clear verification plans. Feature ownership is confirmed. For integration, actual integration constraints, target changes, and the scope of existing behaviors to protect have been checked.
+- Current consensus and unconfirmed items are saved and can support task breakdown. Code, Git, or log locations that do not yet exist may be recorded as proposed arrangements; do not pretend they are already in place.
+
+Check these conditions against the current scope and impact without adding a process that waits for approval after each chapter. Verify unconfirmed key conditions before dependent work, and continue other authorized work whose prerequisites are met. Shared methods: [Shared Guide | Web Research and Evidence Assessment](shared-research.md); [Shared Guide | Collaboration Preparation and Configuration](shared-preparation.md); [Shared Guide | Changes, Records, and Handover](shared-changes.md).
+
+The initiation result should explain the current goals, boundaries for this phase, ownership, operating conditions, integration constraints, initial acceptance criteria, unconfirmed items, and actual record entry points. Establish the current business consensus through the user's corrections and confirmation, then enter the [Feature Track | Task Breakdown Guide](feature-work-breakdown.md) to help the user explain the actual work in detail. Update the relevant body text and scope when information changes; do not rigidly freeze the initial requirements.
+
+Before entering the track, supplement the applicable project or feature configuration using the mechanism on [Home](index.md). Read existing content first, explain the actual changes and their scope, retain valid settings, and check that they load. Configuration should point to Home and the latest guides for each stage so subsequent AI reads according to the current stage. Also retain stable requirements such as integration constraints, feature record locations, and checking historical solutions and runtime logs before fixing bugs.
+
+**Feature Track reading order:** [Feature Track | Initiation Guide](feature-initiation.md) → [Feature Track | Task Breakdown Guide](feature-work-breakdown.md) → [Feature Track | Initiation and Design Document Guide](feature-design.md) → [Feature Track | Node Design and Execution Methods Guide](feature-node-design.md) → [Feature Track | Execution and Progress Guide](feature-execution.md). Read according to the current stage; reuse confirmed records that remain valid as needed without rereading the entire knowledge base.

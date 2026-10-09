@@ -1,0 +1,4 @@
+interface:
+  display_name: "Autoguide"
+  short_description: "Build work automation through user-led collaboration"
+  default_prompt: "Use $autoguide, read the bundled Home first, and help me progress from my goals through the relevant stage."
