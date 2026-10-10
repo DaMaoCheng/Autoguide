@@ -1,6 +1,6 @@
 # Project Track | Node Design and Execution Methods Guide
 
-**Keywords:** node design; node selection; execution methods; fixed rules; scripts; configuration; existing tools; system interfaces; scheduled triggers; workflow orchestration; account classification; weighted scoring; specialized judgment models; Jev; general-purpose LLM; model API; local deployment; real-time online research; X; GitHub; Linux.do; technical evidence; inputs and outputs; failure recovery; duplicate prevention; sample validation; runtime records; speed; stability; reproducibility
+**Keywords:** decision-time data; data access; freshness; threshold evidence; weights; observable feedback; node design; node selection; execution methods; fixed rules; scripts; configuration; existing tools; system interfaces; scheduled triggers; workflow orchestration; account classification; weighted scoring; specialized judgment models; Jev; general-purpose LLM; model API; local deployment; real-time online research; X; GitHub; Linux.do; technical evidence; inputs and outputs; failure recovery; duplicate prevention; sample validation; runtime records; speed; stability; reproducibility
 
 **Summary:** Based on user-confirmed project goals and detailed task breakdown, choose a suitable execution method for each node. Prioritize correctness, stability, speed, explainability, and maintainability, with cost as a secondary consideration. Prefer code, configuration, or existing capabilities for nodes that can be expressed as explicit rules; consider models for parts requiring understanding or judgment. Use real-time technical research from Chinese and international sources and actual sample validation to form a node execution plan suitable for construction.
 
@@ -31,6 +31,16 @@ When fields, weights, and classification conditions are explicit and sufficient,
 Once time conditions are confirmed, a scheduled task or platform scheduler starts execution as agreed, without a model deciding when to run. Choose a script plus scheduled task or existing platform capability according to the actual implementation environment. Directly reuse reliable existing capabilities that meet requirements.
 
 Describe the triggering mechanism separately from the triggered work. For example, start an account-classification script at a fixed time: the trigger starts it, while the script reads, scores, and assigns groups. Specify time zone, trigger frequency, and handling of repeated triggers as needed. Do not have an LLM reinterpret “run when the time arrives” every time.
+
+## Verify Data Availability and Rule Evidence
+
+Before relying on an input, verify its source, access permissions, meaning, freshness, and whether it actually exists at the moment the node makes its decision. Define handling for missing, stale, or invalid values. An end-of-day total cannot guide a midday decision as if it were already known; historical validation must reproduce the information available at decision time. If needed data cannot be obtained, assess whether minimal collection, a reliable existing input, a narrower scope, or another approach fits the goal. Do not fabricate fields or silently infer them with a model.
+
+Explain the basis of important thresholds, weights, and scoring rules: user-confirmed business requirements, documented experience, observed data, or a provisional hypothesis. Record units, applicability, and validation status where relevant. For example, “send a coupon after 60 minutes” or a 30% field weight needs a reason and an appropriate check; an executable rule is not evidence that its business assumption is correct. Use representative samples and necessary boundary cases before relying on it, then assess business impact when that is the claimed benefit. Record the rule and its evidence in existing documentation rather than creating a separate register for every node.
+
+For methods that learn from outcomes, establish what feedback can actually be observed, when it arrives, and how candidate quality can be assessed. Trying one action does not reveal what would have happened under every unchosen action. Model scores or simulation results are estimates, not observed customer outcomes. Assess available data, evaluation credibility, operational impact, and maintenance before choosing adaptive learning. A small action set alone does not make the problem ordinary classification, and rules → bandits → reinforcement learning is not a required upgrade path. Keep fixed rules when they meet the goal; complexity needs evidence of useful benefit.
+
+Reference: [Vowpal Wabbit's Contextual Bandits documentation](https://vowpalwabbit.org/docs/vowpal_wabbit/python/latest/tutorials/python_Contextual_bandits_and_Vowpal_Wabbit.html), checked on 2026-10-10, explains feedback for the chosen action and exploration. It supports the feedback distinction, not a requirement to adopt bandits or train a model.
 
 ## Choose Execution Methods According to the Task and Environment
 

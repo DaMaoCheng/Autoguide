@@ -2,7 +2,7 @@
 
 **User-led guidance for turning real work into reliable automation.**
 
-Guide version: **1.2.1**
+Guide version: **1.2.2**
 
 Autoguide helps a user and an AI develop projects, features, tools, scripts, and automated workflows from actual business needs. It connects goal clarification, task breakdown, design, implementation, verification, and iteration. The installable `autoguide` Skill guides the AI to read the rules needed for the current stage.
 

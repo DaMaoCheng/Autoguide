@@ -4,7 +4,7 @@
 
 **Summary:** Install the Skill with its complete bundled rules, or adapt it to your AI platform using the source. Verify that the current session can actually read Home and its supporting documents. Read the specific collaboration rules in [Home](index.md) and the corresponding stage documents.
 
-The current compiled version is **1.2.1**, dated **2026-10-10**. The guide text can be read locally without a Feishu account; all AI suggestions and judgments about external facts still require live online tools provided by the platform. The Skill does not include business service accounts, online tools, or authorization to operate on other projects.
+The current compiled version is **1.2.2**, dated **2026-10-10**. The guide text can be read locally without a Feishu account; all AI suggestions and judgments about external facts still require live online tools provided by the platform. The Skill does not include business service accounts, online tools, or authorization to operate on other projects.
 
 ## Use the existing Skill directly
 

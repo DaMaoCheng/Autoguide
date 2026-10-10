@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.2 — 2026-10-10
+
+- Recheck current problem premises without replacing user goals independently.
+- Verify decision-time data, access and freshness, and the evidence behind thresholds, weights, and learned feedback.
+- Distinguish functional acceptance from business impact using proportionate baselines, comparisons, observation periods, and relevant side-effect limits.
+- Apply the same standards to both tracks, Home, and the companion Skill without mandatory experiments, new forms, or added approval gates.
+
 ## 1.2.1 — 2026-10-10
 
 - Require AI to review existing code and relevant callers, locate proposed changes, assess related effects, and define acceptance checks before editing projects, features, tools, scripts, or Bug fixes.

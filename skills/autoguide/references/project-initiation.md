@@ -1,6 +1,6 @@
 # Project Track | Initiation Guide
 
-**Keywords:** project; initiation; overall goal; first-phase goal; acceptance criteria; test specifications; acceptance methods; simulation of user operations; test results; operating boundaries; deployment location; platforms and servers; technology selection; code architecture; language; maintenance; requirement changes; phases; minimal validation; initiation record; version number; version rules; Git; version history; local repository; cloud work environment; handoff entry points
+**Keywords:** current premises; business baseline; observable outcomes; side effects; comparison; project; initiation; overall goal; first-phase goal; acceptance criteria; test specifications; acceptance methods; simulation of user operations; test results; operating boundaries; deployment location; platforms and servers; technology selection; code architecture; language; maintenance; requirement changes; phases; minimal validation; initiation record; version number; version rules; Git; version history; local repository; cloud work environment; handoff entry points
 
 **Summary:** Starting with the problem the user wants to solve, gradually confirm the project's overall goal, first-phase scope, operating method, resources, and maintenance conditions. Research suitable implementation approaches online in real time against the deployment environment, decide which phase should include new requirements, and develop first-phase acceptance criteria and initial testing arrangements alongside these discussions. Refine them during task breakdown and design, and integrate them into an initiation record that can evolve with the discussion. Once the user confirms the current agreement, proceed to task breakdown and node design.
 
@@ -11,6 +11,8 @@ Initiation clarifies what is currently being planned and establishes the basis f
 ## Clarify the Overall Goal and First-Phase Goal
 
 Start with the user's actual work and views: understand how they work today, the problems they encounter, why change is needed, who will use the result, and what change they ultimately want to see. A tool, feature, or request for “full automation” is only a starting point; continue exploring its underlying purpose.
+
+Check whether the problem's premises still hold using relevant current records, actual behavior, and live verification of external facts. Separate the observed symptom, the user's explanation, and an established cause. For example, a past queue-abandonment problem may now be low attendance; explain the evidence and discuss whether the goal should change rather than replacing the user's goal independently. Reuse valid evidence and revisit affected premises when circumstances change, without restarting initiation for every small edit.
 
 Distinguish the project's long-term overall goal from the outcome to deliver in the first phase. Set first-phase scope around the most pressing current problem, and state what is excluded for now, which ideas are deferred, and which still need discussion. If the user has not expressed views on these matters, help them describe their work and expectations first; the AI must not predefine a complete set of goals.
 
@@ -35,6 +37,18 @@ For each check, specify the corresponding requirement, test environment, inputs 
 By default, integrate acceptance criteria, test specifications, and actual results into the “Validation and Acceptance” section of the current initiation and design document, linked to features. Split detailed testing into a separate document only when project complexity warrants it, keeping an entry point in the main document to avoid duplicate maintenance. See the [Design Document Guide](project-design.md) for writing guidance.
 
 The AI restates its current understanding using existing information, and continues asking about ambiguities, contradictions, or omissions that affect current decisions, establishing user-confirmed goals and boundaries. Once goals and authorization are clear, proceed in the current direction without asking again about the output format every round. Handle new requirements by phase under this guide. Confirmation establishes agreement for this stage; it can still be adjusted later based on actual conditions.
+
+### Distinguish Functional Acceptance from Business Impact
+
+For work intended to improve business results, record how to assess that improvement alongside functional acceptance. A coupon displaying correctly is a functional result; improved new-customer purchases require business evidence. A conversion problem is not proof of its suspected cause, and passing code or interaction tests cannot establish sales growth. Simple tools without a business-effect claim need only their applicable acceptance checks.
+
+Use available evidence to describe the starting situation, the desired outcome, how it is measured, and when a result can be observed. State the counted population, numerator and denominator where relevant, data source, and observation period; record missing information honestly. Clicks or stated purchase intent may help diagnose a process but do not automatically establish paid orders, profit, or repeat purchases. Do not invent a target percentage or insist that the user supply unavailable historical data.
+
+Choose a proportionate comparison method for the actual change. A before-and-after comparison may be informative but can be affected by campaigns, seasonality, traffic sources, or simultaneous changes. Where justified and feasible, use a suitable control or experiment and account for interactions between groups. Mark results as inconclusive when observations are insufficient; neither a short trial nor a correlated increase proves causation. Do not require A/B testing for every script, prescribe a fixed trial length, or initiate live experiments or continued monitoring without authorization.
+
+Assess relevant side effects with the user in plain language. More orders may come with lower profit, more refunds, or excessive messages; faster processing may come with more errors. Record the outcomes that must be protected and evidence-based conditions for pausing, reverting, or revisiting the approach when needed. Keep unknown limits pending confirmation rather than fabricating weights or thresholds. Execution and later feedback use the same agreed criteria; do not silently redefine success after seeing results.
+
+Record this information within the existing initiation or design document's validation section, and actual observations in the existing records. Functional completion, observed business effects, and outcomes still awaiting evidence remain separate. Reference: [Microsoft's Experimentation Process](https://github.com/microsoft/experiment-catalog/blob/main/experimentation-process.md), checked on 2026-10-10, supports baselines and repeatable comparisons; its team-approval process is not imposed by this guide.
 
 ## Understand How the Project Operates as a Whole
 

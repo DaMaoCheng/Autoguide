@@ -10,6 +10,8 @@ This is the guide for the current stage of the Feature Track. First read [Home](
 
 First read the current feature documentation and breakdown records, and map each node's inputs, processing rules, outputs, triggers, dependencies, and completion criteria to one another. Base technical choices on both requirements and the implementation environment. For integration, read the actual existing implementation and integration conventions. For standalone operation, verify the machine's or platform's available capabilities, operating methods, and maintenance conditions.
 
+Apply [Data Availability and Rule Evidence](project-node-design.md#verify-data-availability-and-rule-evidence) to both integrated and standalone features: verify that inputs are accessible and available at decision time, handle missing or stale values, and explain the evidence and validation status of thresholds and weights. If learning from outcomes is proposed, verify observable feedback and the credibility of candidate evaluation first. Match the depth to the actual feature; do not introduce adaptive models or separate evidence forms by default.
+
 ## Verify reusable content and design execution methods
 
 Before reuse, actually inspect the purpose, inputs and outputs, limitations, versions, and applicability conditions of existing code, tools, rules, or modules. Connect them only after confirming they meet current requirements. Write integrated features according to the original project's architecture, technology stack, directory conventions, and integration methods. New modules and interfaces must also follow the original architecture. Do not copy shared rules into another set that gradually diverges.
