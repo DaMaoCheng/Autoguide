@@ -1,14 +1,38 @@
 # Shared Guide | Changes, Records, and Handover
 
-**Keywords:** handling changes; requirement changes; current consensus; actual status; recording responsibilities; Git; versions; changelog; Bug log; runtime logs; historical issue search; handoff; new conversations; record entry points; accessible copies
+**Keywords:** handling changes; existing-code review; change plan; related effects; regression checks; requirement changes; current consensus; actual status; recording responsibilities; Git; versions; changelog; Bug log; runtime logs; historical issue search; handoff; new conversations; record entry points; accessible copies
 
-**Summary:** Check relevant rules and carry current work forward when stages, goals, environments, or conversations change. Distinguish requirements, capabilities, evidence, and actual delivery status. Clarify the responsibilities of Git and the three types of logs, and use concise handoff and Bug templates. Continue referring to existing stage standards for detailed implementation and verification.
+**Summary:** Before modifying existing code, review its implementation and related effects, define acceptance checks, and form a proportionate plan without routine user approval. Check relevant rules and carry current work forward when stages, goals, environments, or conversations change. Distinguish requirements, capabilities, evidence, and actual delivery status. Clarify the responsibilities of Git and the three types of logs, and use concise handoff and Bug templates. Continue referring to existing stage standards for detailed implementation and verification.
 
 First read [Home](index.md). This guide applies to changes, records, and handoff in both the Project Track and Feature Track. Retain current authorization, align important business changes with the user, and reuse confirmed information that remains valid as needed.
 
 ## Return to the knowledge base at each stage
 
 When starting work or a new conversation, first read Home and the existing overall index. When entering the next stage, read its corresponding guide first. Recheck affected content when goals change, rules conflict, a new method is adopted, or the knowledge base is updated. Reuse existing materials that remain valid as needed rather than rereading the entire knowledge base before every tiny action. If access is unavailable, explain the missing content and its impact. Do not claim to have followed rules that were not read.
+
+## Review existing code and form a change plan before editing
+
+Apply this step before modifying existing projects, features, tools, scripts, or Bug fixes. The AI completes the review and plan itself, then proceeds within existing authorization; routine planning does not require user approval. A user request to discuss or review without editing still sets the boundary. This step does not replace initiation for a genuinely new goal, or require repeating initiation for every existing-code change.
+
+1. **Check the actual starting point.** Locate the real working directory, current version, uncommitted changes, applicable project rules, relevant documentation, and existing tests. Read the code involved in the requested behavior, including its entry points, implementation, and relevant callers. For a Bug, first consult historical Bug records and current runtime evidence. Distinguish verified behavior from assumptions; filenames, old chats, and model memory cannot establish current implementation.
+2. **Identify what to change and how.** State the desired before-and-after behavior and identify the files, functions, components, configuration, or interfaces that need changes. Explain their responsibilities and why these are the appropriate locations. Verify reuse candidates and work within the existing architecture, framework, UI, and conventions. Keep the change focused on the authorized goal and protect existing user or collaborator edits.
+3. **Trace related effects.** Check the relevant upstream inputs, downstream consumers, shared modules, data formats, state and permission rules, configuration, and external connections as applicable. Identify which related features or workflows may be affected, what must keep working, and risks that still need verification. Do not equate “I found no callers” with “there can be no impact.” Check current APIs or other external assumptions online when the change depends on them, following the research guide.
+4. **Define acceptance and checks before editing.** Specify concrete expected results for the changed behavior and the affected existing flows, including necessary exceptional or boundary cases. Select script checks, simulated user interactions, or both according to the behavior and risk. Check the relevant baseline where feasible, distinguishing pre-existing failures from newly introduced ones. State missing validation conditions and suitable backup or rollback measures where the actual risk warrants them; a written plan cannot prove that unrelated functionality will remain unaffected.
+5. **Write a usable plan, self-review it, then implement.** Record the change scope, implementation order, reuse, related effects, and acceptance checks in the current task record, existing design document, or update log as appropriate. A small change can use a few lines; changes spanning modules need enough persistent detail for execution and handover. Self-check that the plan meets the goal without unnecessary changes, then implement in dependency order. Check each completed part and the affected existing flows; record actual results and unresolved items. If new evidence invalidates the plan, revise the affected portion before continuing rather than following it mechanically or restarting the whole review for every minor action.
+
+```text
+Requested change and current behavior → desired behavior:
+Reviewed code, current version, and actual locations:
+Change locations, approach, and implementation order:
+Verified reuse and existing behavior to preserve:
+Affected related features, risks, and unverified conditions:
+Acceptance criteria, baseline, and corresponding checks:
+Record location and backup or rollback measures where needed:
+```
+
+Keep these technical details actionable for the AI and explain material effects to the user in plain business language. Do not turn routine internal planning into a new confirmation gate or require a coding beginner to judge the plan. Important goal or scope changes and actions outside authorization still follow existing authorization boundaries. Do not invent acceptance results or guarantee success merely because the review was completed.
+
+Method references: [Google: Review Design, Behavior, Tests, and System Context](https://google.github.io/eng-practices/review/reviewer/looking-for.html) and [Google: Keep Changes Focused and Plan Dependencies](https://google.github.io/eng-practices/review/developer/small-cls.html), checked on 2026-10-10. These support the review and change-scope considerations. The requirement for AI to form this plan before editing, without routine user confirmation, is this guide's collaboration rule; it is not a claim that Google's review process requires that sequence.
 
 ## Realign when goals or environments change
 

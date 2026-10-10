@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.1 — 2026-10-10
+
+- Require AI to review existing code and relevant callers, locate proposed changes, assess related effects, and define acceptance checks before editing projects, features, tools, scripts, or Bug fixes.
+- Record and self-review a proportionate change plan, then implement and verify within existing authorization without routine user approval; revise the plan when evidence changes.
+- Route both execution tracks, Home, the companion Skill, installation guidance, and project configuration examples to the shared change-planning standard.
+
 ## 1.2.0 — 2026-10-09
 
 - Rename the project to Autoguide and the Skill identifier to `autoguide`.

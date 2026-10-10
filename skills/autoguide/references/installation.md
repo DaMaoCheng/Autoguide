@@ -4,7 +4,7 @@
 
 **Summary:** Install the Skill with its complete bundled rules, or adapt it to your AI platform using the source. Verify that the current session can actually read Home and its supporting documents. Read the specific collaboration rules in [Home](index.md) and the corresponding stage documents.
 
-The current compiled version is **1.2.0**, dated **2026-10-09**. The guide text can be read locally without a Feishu account; all AI suggestions and judgments about external facts still require live online tools provided by the platform. The Skill does not include business service accounts, online tools, or authorization to operate on other projects.
+The current compiled version is **1.2.1**, dated **2026-10-10**. The guide text can be read locally without a Feishu account; all AI suggestions and judgments about external facts still require live online tools provided by the platform. The Skill does not include business service accounts, online tools, or authorization to operate on other projects.
 
 ## Use the existing Skill directly
 
@@ -74,7 +74,7 @@ Confirm the following:
 - The intended Skill name, location, and version are loaded; merely copying files does not prove successful loading. If an update does not appear, reload or start a new session according to the current platform mechanism.
 - Home and the needed supporting documents are actually readable. Resolve relative paths from the current `SKILL.md` location; do not guess from the directory of the business project being worked on.
 - AI can explain that it reads Home first, the corresponding document before each stage, and reuses valid records when taking over existing work instead of repeating initiation in full each time.
-- Configuration changes are explained before editing and preserve existing content; Bugs are handled by checking historical logs first. Once the goal and authorization are clear, work continues without adding routine approval for each chapter.
+- Configuration changes are explained before editing and preserve existing content; Bugs are handled by checking historical logs first. Before modifying existing code, the AI follows the [Existing-Code Review and Change Plan](shared-changes.md#review-existing-code-and-form-a-change-plan-before-editing), assessing related effects and defining acceptance checks before implementation. Once the goal and authorization are clear, the AI self-reviews its plan and continues without routine approval for the plan or each chapter.
 - Record local rule access separately from the online tool status. If online tools are unavailable, local rules can still be read and existing facts organized, but model memory must not be presented as suggestions verified online.
 
 Verifying installation structure and entry-point reading does not prove that business automation runs successfully or guarantee that every client supports the same loading mechanism. Actual projects must still be checked against their own acceptance criteria.
@@ -89,7 +89,7 @@ You can send your AI:
 Use this installation guide and the complete adjacent SKILL.md to create an adapted version for my current platform.
 First identify the platform, operating mode, and scope of this use. Verify the current official Skill, rule, or project-instruction mechanism online; ask me if you cannot identify it.
 Preserve the complete current references directory and Home index. Read the actual documents by relative path without depending on the original author's private knowledge base.
-Retain user direction, live online verification of suggestions, reading by stage, preservation of existing configuration, checking Bug history first, the three log types, and actual-state requirements.
+Retain user direction, live online verification of suggestions, reading by stage, preservation of existing configuration, review and planning before existing-code changes with related-effect and acceptance checks and no routine user approval, checking Bug history first, the three log types, and actual-state requirements.
 Generate files that can be saved or downloaded and installation instructions. Verify file structure and document reading; do not assume every platform supports the same import format.
 Explain file creation, installation, and changes to other configuration separately. Continue within the authorized scope without automatically expanding to global settings for all projects.
 ```

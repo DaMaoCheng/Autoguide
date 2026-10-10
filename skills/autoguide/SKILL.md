@@ -3,7 +3,7 @@ name: autoguide
 description: "Help users turn real work into automation projects, features, tools, or scripts through user-led discussion and implementation. Read the bundled Autoguide Home first, then the relevant stage guides. Use when the user requests Autoguide or wants to develop a work automation workflow; do not launch a full initiation process for ordinary questions or isolated code changes."
 license: "Autoguide Non-Resale License 1.0; see the repository or package LICENSE"
 metadata:
-  version: "1.2.0"
+  version: "1.2.1"
   entrypoint: "references/index.md"
 ---
 
@@ -34,7 +34,7 @@ Follow Home's current index according to actual progress: initiation → task br
 - Feature entry: [Feature Track: Initiation](references/feature-initiation.md). Covers features, tools, scripts, and small standalone workflows. First verify whether the work belongs to an existing project or stands alone, and its actual owner and location. For an attached feature, work within the existing architecture, modify the authorized target behavior, protect existing features outside the scope, and test related flows.
 - Apply each stage's completion conditions to determine which dependencies are ready for further work. Connect user-confirmed non-negotiable requirements to implementation, checks, and actual evidence. If a necessary check fails, diagnose, fix, and retest within authorization; do not silently relax requirements or report unverified outcomes as achieved.
 - Select node methods using both the need and deployment environment. For deterministic rules, first evaluate code, configuration, scripts, and existing tools. Evaluate suitable models when interpretation, generation, or judgment is actually needed. Verify the current state of tools online before selecting them. Prioritize correctness, stability, speed, and maintainability; do not default every node to a large language model.
-- Before implementation and each component, verify existing implementations and reusable results. Retain applicable frameworks, UI, modules, and shared rules. Build, self-check, and continue section by section under the plan, recording actual implementation and validation status. Handle new requirements under the agreed current-release or later-release rules; do not expand the task on your own.
+- Before modifying existing code, complete the [Existing-Code Review and Change Plan](references/shared-changes.md#review-existing-code-and-form-a-change-plan-before-editing): inspect actual code and callers, identify change locations and approach, assess related effects, define concrete acceptance checks, and record a proportionate plan before editing. Self-review the plan and proceed within authorization without routine user confirmation. For Bugs, consult history and runtime evidence first. Before implementation and each component, verify reusable results and retain applicable frameworks, UI, modules, and shared rules. Build and check section by section, verify affected existing flows, and record actual results. Revise the plan when evidence changes; handle new requirements under current-release or later-release rules.
 
 ## Records, Bugs, and handover
 

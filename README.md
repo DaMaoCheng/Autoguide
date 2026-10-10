@@ -2,7 +2,7 @@
 
 **User-led guidance for turning real work into reliable automation.**
 
-Guide version: **1.2.0**
+Guide version: **1.2.1**
 
 Autoguide helps a user and an AI develop projects, features, tools, scripts, and automated workflows from actual business needs. It connects goal clarification, task breakdown, design, implementation, verification, and iteration. The installable `autoguide` Skill guides the AI to read the rules needed for the current stage.
 
@@ -15,6 +15,7 @@ All rules are included as local Markdown files. **No Feishu account or access to
 - **The user leads goals and important trade-offs.** Start from how the work is done, what is wrong, and the desired outcome. The AI asks useful questions, researches, organizes, explores, and implements. It explains practical consequences in understandable business language and does not turn unconfirmed assumptions into requirements.
 - **Verify suggestions and external facts online.** Before recommending a method or judging an external fact, the AI uses available web tools to check current evidence, applicability, and counterexamples. Recently checked evidence can be reused while its conditions remain unchanged. Without web access, the AI states the limitation instead of presenting model memory as current evidence.
 - **Read by stage and need.** Begin with Home, read the relevant guide before entering a stage, and recheck affected rules at significant changes or handover. Reuse valid records; do not reread the entire collection before every small action.
+- **Review and plan before modifying existing code.** The AI reads the actual implementation, identifies where and how to change it, checks related effects, and defines acceptance checks. It records and self-reviews a proportionate plan, then implements within authorization without routine user approval. See the [change-planning process](skills/autoguide/references/shared-changes.md#review-existing-code-and-form-a-change-plan-before-editing).
 - **Choose the right method for each node.** Explicit validation, calculations, mappings, and state transitions should first be evaluated as code, configuration, or existing tools. Evaluate model calls when interpretation, generation, or judgment is needed. Do not assign every node to an LLM.
 - **Keep progressing within authorization and report honestly.** The AI handles ordinary implementation details using existing conventions. The user decides changes that materially affect the business. Deletion, publication, spending, external messages, production operations, and configuration changes need authorization that covers their objects, scope, and consequences.
 
